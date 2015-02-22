@@ -9,6 +9,11 @@ Using an Rmd file, create a short analysis report using R of the gapminder datas
 
 1. Move into your R project working directory (the one you have been working with for git and github).
 ```{r}
+require(ggplot2)
+require(plyr)
+require(ggthemes)
+require(reshape2)
+require(MASS)
 mydata = read.table(file="~/git_demo_iplant/output/combined_gapMinder.tsv", sep="\t", header=TRUE)
 ```
 2. Take a look at the file that resulted from our scripts this morning (which should be in the output folder, and pick three countries you are interested in.
