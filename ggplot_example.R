@@ -11,6 +11,7 @@ require(ggplot2)
 require(plyr)
 require(ggthemes)
 require(reshape2)
+require(MASS)
 
 head(iris)
 iris[1:2, ]
@@ -23,3 +24,6 @@ head(d2)
 d2 <- diamonds[sample(1:dim(diamonds)[1], 1000), ]
 d2plot <- ggplot(d2, aes(carat, price, color=color))
 d2plot + geom_point()
+
+myplot2 <- ggplot(birthwt, aes(factor(race), bwt)) + geom_boxplot()
+summary(myplot2)
